@@ -5,25 +5,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/colorBackground">
+    tools:context=".MainActivity">
 
-    <ListView
-        android:id="@+id/listView"
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:backgroundTint="@color/colorToolbar">
 
-    <ImageView
-        android:id="@+id/btn_tambah"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notes"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="48dp"
         android:clickable="true"
-        app:srcCompat="@drawable/ic_add_circle_white_24dp" />
+        android:backgroundTint="@color/colorButton"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+
+    <include layout="@layout/activity_list"/>
 
 </RelativeLayout>
